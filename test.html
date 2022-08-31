@@ -10,7 +10,7 @@
         var ua = window.navigator.userAgent.toLowerCase();
         document.write("<h1>" + ua + "</h1>")
 
-        if ("micromessenger" in ua){
+        if (ua.indexOf("micromessenger") != -1 ){
             return true
         }
         else{
