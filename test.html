@@ -5,16 +5,21 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-  
 <script>
     function isWeiXin(){
         var ua = window.navigator.userAgent.toLowerCase();
         document.write("<h1>" + ua + "</h1>")
+
+        if ("micromessenger" in ua){
+            return true
+        }
+        else{
+            return false
+        }
     }
 
-    isWeiXin()
+    let isWeiXin = isWeiXin()
+    document.write("<h1>" + isWeiXin + "</h1>")
   
 </script>
 
